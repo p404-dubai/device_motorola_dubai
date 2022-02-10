@@ -23,6 +23,9 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := kryo385
 
+# Biometrics
+TARGET_SURFACEFLINGER_UDFPS_LIB := //$(DEVICE_PATH):libudfps_extension.dubai
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := dubai
 TARGET_NO_BOOTLOADER := true

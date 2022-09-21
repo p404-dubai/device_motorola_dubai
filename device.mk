@@ -424,7 +424,9 @@ TARGET_SCREEN_DENSITY := 400
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@2.0-service.multihal \
-    libsensorndkbridge
+    libsensorndkbridge \
+    PRODUCT_PACKAGES += \
+    sensors.dubai
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/sku_lahaina/android.hardware.sensor.accelerometer.xml \

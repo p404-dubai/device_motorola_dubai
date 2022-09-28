@@ -68,6 +68,7 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # Ant
 PRODUCT_PACKAGES += \
+    AntHalService-Soong \
     com.dsi.ant@1.0.vendor
 
 # Atrace

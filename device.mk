@@ -308,10 +308,6 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 # Partitions - Super
 PRODUCT_BUILD_SUPER_PARTITION := false
 
-# Perf
-PRODUCT_PACKAGES += \
-    vendor.qti.hardware.perf@2.2.vendor
-
 # Platform
 TARGET_BOARD_PLATFORM := lahaina
 TARGET_BOOTLOADER_BOARD_NAME := dubai
@@ -330,11 +326,8 @@ TARGET_COMMON_QTI_COMPONENTS += \
     av \
     bt \
     display \
-    gps
-
-# QTI service tracker
-PRODUCT_PACKAGES += \
-    vendor.qti.hardware.servicetracker@1.2.vendor
+    gps \
+    perf
 
 # RenderScript
 PRODUCT_PACKAGES += \
@@ -392,9 +385,7 @@ PRODUCT_COPY_FILES += \
 
 # Thermal
 PRODUCT_PACKAGES += \
-    android.hardware.thermal@2.0-service.qti \
-    android.hardware.thermal@2.0 \
-    android.hardware.thermal@2.0.vendor
+    android.hardware.thermal@2.0-service.qti
 
 # Trusted UI
 PRODUCT_PACKAGES += \
@@ -462,7 +453,6 @@ PRODUCT_COPY_FILES += \
 
 # WiFi Display
 PRODUCT_PACKAGES += \
-    libavservices_minijail \
     libnl \
     libwfdaac_vendor
 

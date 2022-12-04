@@ -329,7 +329,8 @@ TARGET_COMMON_QTI_COMPONENTS += \
     gps \
     perf \
     usb \
-    vibrator
+    vibrator \
+    wfd
 
 # RenderScript
 PRODUCT_PACKAGES += \
@@ -436,11 +437,7 @@ PRODUCT_COPY_FILES += \
 
 # WiFi Display
 PRODUCT_PACKAGES += \
-    libnl \
     libwfdaac_vendor
-
-PRODUCT_BOOT_JARS += \
-    WfdCommon
 
 # Inherit from vendor blobs
 $(call inherit-product, vendor/motorola/dubai/dubai-vendor.mk)

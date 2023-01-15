@@ -1,0 +1,4 @@
+runtime_resource_overlay {
+    name: "QSSISystemUIRes",
+    product_specific: true,
+}

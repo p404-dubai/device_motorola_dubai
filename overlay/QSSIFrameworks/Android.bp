@@ -1,0 +1,4 @@
+runtime_resource_overlay {
+    name: "QSSIFrameworksRes",
+    product_specific: true,
+}

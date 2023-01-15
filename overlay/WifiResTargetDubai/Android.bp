@@ -1,0 +1,4 @@
+runtime_resource_overlay {
+    name: "WifiResTargetDubai",
+    product_specific: true,
+}

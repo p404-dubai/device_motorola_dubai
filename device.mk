@@ -235,8 +235,10 @@ PRODUCT_PACKAGES += \
     init.qti.chg_policy.sh \
     init.qti.kernel.sh \
     init.qti.media.sh \
-    init.qti.qcv.sh \
-    vendor_modprobe.sh
+    init.qti.qcv.sh
+
+PRODUCT_VENDOR_PROPERTIES += \
+    vendor.all.modules.ready=1
 
 # IPACM
 PRODUCT_PACKAGES += \

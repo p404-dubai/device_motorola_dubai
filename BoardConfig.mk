@@ -50,10 +50,6 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_RAMDISK_USE_LZ4 := true
 KERNEL_DEFCONFIG := dubai-qgki_defconfig
 
-# Kernel modules - WLAN
-TARGET_MODULE_ALIASES += \
-    qca6750.ko:qca_cld3_qca6750.ko
-
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
 TARGET_BOARD_PLATFORM := lahaina

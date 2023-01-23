@@ -380,6 +380,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.perf@2.2.vendor
 
+# Platform
+TARGET_BOARD_PLATFORM := lahaina
+TARGET_BOOTLOADER_BOARD_NAME := dubai
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti

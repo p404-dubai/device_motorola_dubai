@@ -194,6 +194,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fastbootd
 
+# Filesystem
+PRODUCT_PACKAGES += \
+    fs_config_files
+
+TARGET_FS_CONFIG_GEN += $(DEVICE_PATH)/configs/mot_aids.fs
+
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0.vendor

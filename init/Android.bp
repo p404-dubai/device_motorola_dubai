@@ -5,42 +5,6 @@ prebuilt_etc {
 }
 
 sh_binary {
-    name: "init.class_main.sh",
-    src: "init.class_main.sh",
-    vendor: true,
-}
-
-sh_binary {
-    name: "init.crda.sh",
-    src: "init.crda.sh",
-    vendor: true,
-}
-
-sh_binary {
-    name: "init.kernel.post_boot-lahaina.sh",
-    src: "init.kernel.post_boot-lahaina.sh",
-    vendor: true,
-}
-
-sh_binary {
-    name: "init.kernel.post_boot-shima.sh",
-    src: "init.kernel.post_boot-shima.sh",
-    vendor: true,
-}
-
-sh_binary {
-    name: "init.kernel.post_boot-yupik.sh",
-    src: "init.kernel.post_boot-yupik.sh",
-    vendor: true,
-}
-
-sh_binary {
-    name: "init.kernel.post_boot.sh",
-    src: "init.kernel.post_boot.sh",
-    vendor: true,
-}
-
-sh_binary {
     name: "init.mmi.boot.sh",
     src: "init.mmi.boot.sh",
     vendor: true,
@@ -87,70 +51,14 @@ sh_binary {
 }
 
 sh_binary {
-    name: "init.qcom.class_core.sh",
-    src: "init.qcom.class_core.sh",
-    vendor: true,
-}
-
-sh_binary {
-    name: "init.qcom.coex.sh",
-    src: "init.qcom.coex.sh",
-    vendor: true,
-}
-
-sh_binary {
-    name: "init.qcom.early_boot.sh",
-    src: "init.qcom.early_boot.sh",
-    vendor: true,
-}
-
-sh_binary {
-    name: "init.qcom.post_boot.sh",
-    src: "init.qcom.post_boot.sh",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "init.qcom.rc",
-    src: "init.qcom.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
-sh_binary {
     name: "init.qcom.sensors.sh",
     src: "init.qcom.sensors.sh",
     vendor: true,
 }
 
 sh_binary {
-    name: "init.qcom.sh",
-    src: "init.qcom.sh",
-    vendor: true,
-}
-
-sh_binary {
     name: "init.qti.chg_policy.sh",
     src: "init.qti.chg_policy.sh",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "init.qti.kernel.rc",
-    src: "init.qti.kernel.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
-sh_binary {
-    name: "init.qti.kernel.sh",
-    src: "init.qti.kernel.sh",
-    vendor: true,
-}
-
-sh_binary {
-    name: "init.qti.media.sh",
-    src: "init.qti.media.sh",
     vendor: true,
 }
 
@@ -182,8 +90,8 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "ueventd.qcom.rc",
+    name: "ueventd.dubai.rc",
     filename: "ueventd.rc",
-    src: "ueventd.qcom.rc",
-    vendor: true,
+    src: "ueventd.dubai.rc",
+    device_specific: true,
 }

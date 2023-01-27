@@ -184,36 +184,18 @@ PRODUCT_PACKAGES += \
     init.mmi.chipset.rc \
     init.mmi.overlay.rc \
     init.mmi.rc \
-    init.qcom.rc \
-    init.qti.kernel.rc \
     init.qti.qcv.rc \
     init.target.rc \
     init.vendor.st21nfc.rc \
-    ueventd.qcom.rc
+    ueventd.dubai.rc
 
 PRODUCT_PACKAGES += \
-    init.class_main.sh \
-    init.crda.sh \
-    init.kernel.post_boot-lahaina.sh \
-    init.kernel.post_boot-shima.sh \
-    init.kernel.post_boot-yupik.sh \
-    init.kernel.post_boot.sh \
     init.mmi.boot.sh \
     init.mmi.touch.sh \
     init.oem.hw.sh \
-    init.qcom.class_core.sh \
-    init.qcom.coex.sh \
-    init.qcom.early_boot.sh \
-    init.qcom.post_boot.sh \
     init.qcom.sensors.sh \
-    init.qcom.sh \
     init.qti.chg_policy.sh \
-    init.qti.kernel.sh \
-    init.qti.media.sh \
     init.qti.qcv.sh
-
-PRODUCT_VENDOR_PROPERTIES += \
-    vendor.all.modules.ready=1
 
 # IPACM
 PRODUCT_PACKAGES += \
@@ -327,6 +309,7 @@ TARGET_COMMON_QTI_COMPONENTS += \
     bt \
     display \
     gps \
+    init \
     perf \
     usb \
     vibrator \

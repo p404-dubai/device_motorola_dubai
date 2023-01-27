@@ -1,4 +1,3 @@
-
 # This file needs to be executed by vendor_init at boot of the device,
 # both in normal and factory mode.
 

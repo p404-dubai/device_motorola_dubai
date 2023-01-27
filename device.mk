@@ -328,7 +328,8 @@ TARGET_COMMON_QTI_COMPONENTS += \
     display \
     gps \
     perf \
-    usb
+    usb \
+    vibrator
 
 # RenderScript
 PRODUCT_PACKAGES += \
@@ -401,13 +402,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
-
-# Vibrator
-PRODUCT_PACKAGES += \
-    vendor.qti.hardware.vibrator.service
-
-PRODUCT_COPY_FILES += \
-    vendor/qcom/opensource/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
 
 # VNDK
 PRODUCT_ENFORCE_ARTIFACT_PATH_REQUIREMENTS := strict

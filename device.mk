@@ -113,6 +113,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.full.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.full.xml \
     frameworks/native/data/etc/android.hardware.camera.raw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.raw.xml
 
+# Data Services
+$(call inherit-product, vendor/qcom/opensource/dataservices/dataservices_vendor_product.mk)
+
 # Display
 PRODUCT_PACKAGES += \
     gralloc.default \
@@ -198,6 +201,9 @@ PRODUCT_PACKAGES += \
     init.qti.qcv.sh
 
 # IPACM
+PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/data-ipa-cfg-mgr-legacy
+$(call inherit-product, vendor/qcom/opensource/data-ipa-cfg-mgr-legacy/ipacm_vendor_product.mk)
+
 PRODUCT_PACKAGES += \
     ipacm \
     IPACM_cfg.xml \
@@ -321,10 +327,13 @@ PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
 
 # RIL
+ENABLE_VENDOR_RIL_SERVICE := true
+
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.5.vendor \
     android.hardware.radio.config@1.2.vendor \
     android.hardware.radio.deprecated@1.0.vendor \
+    android.hardware.wifi.hostapd@1.0.vendor \
     android.system.net.netd@1.1.vendor \
     libprotobuf-cpp-full \
     librmnetctl \

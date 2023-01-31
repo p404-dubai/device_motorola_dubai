@@ -92,23 +92,23 @@ $(WIFI_FIRMWARE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 ALL_DEFAULT_INSTALLED_MODULES += $(RFS_MSM_ADSP_SYMLINKS) $(RFS_MSM_CDSP_SYMLINKS) $(RFS_MSM_MPSS_SYMLINKS) \
                                  $(RFS_MSM_WPSS_SYMLINKS) $(RFS_MSM_SLPI_SYMLINKS) $(WIFI_FIRMWARE_SYMLINKS)
 
-IMS_LIBS := libimscamera_jni.so libimsmedia_jni.so
-IMS_SYMLINKS := $(addprefix $(TARGET_OUT_SYSTEM_EXT_APPS_PRIVILEGED)/ims/lib/arm64/,$(notdir $(IMS_LIBS)))
+IMS_LIBRARIES := libimscamera_jni.so libimsmedia_jni.so
+IMS_SYMLINKS := $(addprefix $(TARGET_OUT_SYSTEM_EXT_APPS_PRIVILEGED)/ims/lib/arm64/,$(notdir $(IMS_LIBRARIES)))
 $(IMS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "IMS lib link: $@"
 	@mkdir -p $(dir $@)
 	@rm -rf $@
-	$(hide) ln -sf /system_ext/lib64/$(notdir $@) $@
+	$(hide) ln -sf /system/system_ext/lib64/$(notdir $@) $@
 
 ALL_DEFAULT_INSTALLED_MODULES += $(IMS_SYMLINKS)
 
-CNE_APP_SYMLINKS := $(TARGET_OUT_VENDOR)/app/CneApp/lib/arm64
-$(CNE_APP_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "Creating CneApp symlinks: $@"
-	@mkdir -p $@
-	$(hide) ln -sf /vendor/lib64/libvndfwk_detect_jni.qti.so $@/libvndfwk_detect_jni.qti.so
+CNE_LIBRARIES := libvndfwk_detect_jni.qti.so
+CNE_SYMLINKS := $(addprefix $(TARGET_OUT_VENDOR_APPS)/CneApp/lib/arm64/,$(notdir $(CNE_LIBRARIES)))
+$(CNE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@mkdir -p $(dir $@)
+	@rm -rf $@
+	$(hide) ln -sf /vendor/lib64/$(notdir $@) $@
 
-ALL_DEFAULT_INSTALLED_MODULES += $(CNE_APP_SYMLINKS)
+ALL_DEFAULT_INSTALLED_MODULES += $(CNE_SYMLINKS)
 
 EXPAT_SYMLINKS := $(TARGET_OUT_VENDOR_EXECUTABLES)/expat
 $(EXPAT_SYMLINKS): $(LOCAL_INSTALLED_MODULE)

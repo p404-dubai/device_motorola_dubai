@@ -223,7 +223,6 @@ PRODUCT_COPY_FILES += \
 
 # Manifests
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest_yupik.xml
-DEVICE_MATRIX_FILE := device/qcom/common/compatibility_matrix.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     $(DEVICE_PATH)/dubai_vendor_framework_compatibility_matrix.xml
 

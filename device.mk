@@ -90,6 +90,9 @@ PRODUCT_COPY_FILES += \
 
 TARGET_USES_FOD_ZPOS := true
 
+# Boot animation
+TARGET_BOOT_ANIMATION_RES := 1080
+
 # Boot control
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.1-impl-qti \
